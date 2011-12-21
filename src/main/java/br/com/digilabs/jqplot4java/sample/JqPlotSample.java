@@ -13,7 +13,7 @@ import br.com.digilabs.jqplot.chart.LineChart;
  */
 public class JqPlotSample {
     
-    public String getLineChart() {
+    public static String lineChart() {
         LineChart<Integer> lineChart;
         lineChart = new LineChart<Integer>("Exemplo Gráfico Linha");
 	lineChart.addValues(1, 2, 3, 4, 5);                
