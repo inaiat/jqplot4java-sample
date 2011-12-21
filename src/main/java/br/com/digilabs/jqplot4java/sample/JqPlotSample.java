@@ -15,7 +15,7 @@ public class JqPlotSample {
     
     public static String lineChart() {
         LineChart<Integer> lineChart;
-        lineChart = new LineChart<Integer>("Exemplo Gráfico Linha");
+        lineChart = new LineChart<Integer>("Line Chart");
 	lineChart.addValues(1, 2, 3, 4, 5);                
         return JqPlotUtils.createJquery(lineChart, "lineChart", "lineChart");
     }

@@ -1,1 +1,8 @@
 JqPlot4Java Sample
+
+How to use:
+
+    $ git clone git@github.com:inaiat/jqplot4java-sample.git
+    $ cd jqplot4java-sample/
+    $ mvn install
+    $ mvn jetty:run
