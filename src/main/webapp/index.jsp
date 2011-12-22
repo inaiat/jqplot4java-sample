@@ -3,68 +3,83 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <!-- Use Compatibility mode in IE -->
-  <title>JqPlot4Java Sample</title>
-  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
-  
-  <link rel="stylesheet" type="text/css" href="js/jquery.jqplot.min.css" />  
-  <!-- BEGIN: load jquery -->
-  <script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- END: load jquery -->
-  
-  <!-- BEGIN: load jqplot -->
-  <script language="javascript" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
-  <script language="javascript" type="text/javascript" src="js/plugins/jqplot.barRenderer.min.js"></script>
-  <script language="javascript" type="text/javascript" src="js/plugins/jqplot.highlighter.min.js"></script>
-  <script language="javascript" type="text/javascript" src="js/plugins/jqplot.cursor.min.js"></script> 
-  <!-- END: load jqplot -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!-- Use Compatibility mode in IE -->
+        <title>JqPlot4Java Sample</title>
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
 
-  <style type="text/css">
-    .jqplot-target {
-        margin-bottom: 2em;
-    }
-    
-    pre {
-        background: #D8F4DC;
-        border: 1px solid rgb(200, 200, 200);
-        padding-top: 1em;
-        padding-left: 3em;
-        padding-bottom: 1em;
-        margin-top: 1em;
-        margin-bottom: 4em;
-        
-    }
-    
-    p {
-        margin: 2em 0;
-    }
-    
-    .note {
-        font-size: 0.8em;
-    }
+        <link rel="stylesheet" type="text/css" href="js/jquery.jqplot.min.css" />  
+        <!-- BEGIN: load jquery -->
+        <script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
+        <!-- END: load jquery -->
 
-    .jqplot-breakTick {
-        
-    }
-  </style>
-  
-  <script class="code" type="text/javascript">
+        <!-- BEGIN: load jqplot -->
+        <script language="javascript" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.barRenderer.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.highlighter.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.cursor.min.js"></script> 
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.barRenderer.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.pointLabels.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.pieRenderer.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/plugins/jqplot.donutRenderer.min.js"></script>
+        <!-- END: load jqplot -->
 
-    $(document).ready(function () {
-        <%=JqPlotSample.lineChart()%>
-    });
+        <style type="text/css">
+            .jqplot-target {
+                margin-bottom: 2em;
+            }
+
+            pre {
+                background: #D8F4DC;
+                border: 1px solid rgb(200, 200, 200);
+                padding-top: 1em;
+                padding-left: 3em;
+                padding-bottom: 1em;
+                margin-top: 1em;
+                margin-bottom: 4em;
+
+            }
+
+            p {
+                margin: 2em 0;
+            }
+
+            .note {
+                font-size: 0.8em;
+            }
+
+            .jqplot-breakTick {
+
+            }
+        </style>
+
+        <script class="code" type="text/javascript">
+
+            $(document).ready(function () {
+            
+            <%=JqPlotSample.lineChart("lineChart")%>
+
+            <%=JqPlotSample.areaChart("areaChart")%>                        
+                    
+            <%=JqPlotSample.barChart("barChart")%>                        
+                
+            <%=JqPlotSample.pieChart("pieChart")%>   
+
+                });
+
+        </script>
 
 
-</script>
-
-    
-  </head>
-  <body>
-    <div>  
-        <div id="lineChart" style="margin-top:20px; margin-left:20px; width:800px; height:300px;"></div>
-    </div>  
-  </div>
+    </head>
+    <body>
+        <div>  
+            <div id="lineChart" style="margin-top:20px; margin-left:20px; width:800px; height:300px;"></div>
+            <div id="areaChart" style="margin-top:20px; margin-left:20px; width:800px; height:300px;"></div>
+            <div id="barChart" style="margin-top:20px; margin-left:20px; width:800px; height:300px;"></div>
+            <div id="pieChart" style="margin-top:20px; margin-left:20px; width:800px; height:300px;"></div>
+        </div>  
+    </div>
 </body>
 </html>
